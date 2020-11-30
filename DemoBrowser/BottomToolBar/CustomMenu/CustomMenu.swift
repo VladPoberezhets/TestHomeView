@@ -8,42 +8,11 @@
 import Foundation
 import UIKit
 
-//class CustomMenu:UIView{
-//
-//    private let tableViewMenu = UITableView()
-//
-//    let arr = ["item1","item2","item3","item4"]
-//
-//    init() {
-//        super.init(frame: .zero)
-//        tableViewMenu.delegate = self
-//        tableViewMenu.dataSource = self
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
-//
-//extension CustomMenu:UITableViewDelegate, UITableViewDataSource{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        arr.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        cell.textLabel?.text = arr[indexPath.row]
-//        return cell
-//    }
-//
-//
-//}
-
 class CustomMenu:UIViewController{
     
     private let tableViewMenu = UITableView()
     
-    let arr = ["item1","item2","item3","item4"]
+    private let arr = ["item1","item2","item3","item4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
