@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50B001D2574E18A00B1C41F /* CustomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B001C2574E18A00B1C41F /* CustomMenu.swift */; };
 		F554B7372570EC4E0010DB6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554B7362570EC4E0010DB6F /* AppDelegate.swift */; };
 		F554B7392570EC4E0010DB6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554B7382570EC4E0010DB6F /* SceneDelegate.swift */; };
 		F554B73B2570EC4E0010DB6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554B73A2570EC4E0010DB6F /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F50B001C2574E18A00B1C41F /* CustomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenu.swift; sourceTree = "<group>"; };
 		F554B7332570EC4E0010DB6F /* DemoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F554B7362570EC4E0010DB6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F554B7382570EC4E0010DB6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F50B001B2574E16F00B1C41F /* CustomMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F50B001C2574E18A00B1C41F /* CustomMenu.swift */,
+			);
+			path = CustomMenu;
+			sourceTree = "<group>";
+		};
 		F554B72A2570EC4E0010DB6F = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		F554B74B2570ED640010DB6F /* BottomToolBar */ = {
 			isa = PBXGroup;
 			children = (
+				F50B001B2574E16F00B1C41F /* CustomMenu */,
 				F554B7502570EDEA0010DB6F /* ToolBarVIew.swift */,
 				F554B74C2570EDDC0010DB6F /* ButtonToolBar.swift */,
 			);
@@ -168,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50B001D2574E18A00B1C41F /* CustomMenu.swift in Sources */,
 				F554B7512570EDEA0010DB6F /* ToolBarVIew.swift in Sources */,
 				F554B73B2570EC4E0010DB6F /* ViewController.swift in Sources */,
 				F554B7632571722C0010DB6F /* SearchTextFieldDelegate.swift in Sources */,

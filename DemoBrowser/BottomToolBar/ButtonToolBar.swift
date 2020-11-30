@@ -24,6 +24,7 @@ class ButtonToolBar:UIView{
         button.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         button.contentMode = .center
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(showMenu), for: .touchUpInside)
         return button
     }
     
@@ -65,8 +66,55 @@ class ButtonToolBar:UIView{
         NSLayoutConstraint.activate(buttonConstraint(view: menuButton))
     }
     
+    @objc func showMenu(sender: UIButton){
+        switch sender {
+        case backButton:
+            print("backButton")
+        case homeButton:
+            print("homeButton")
+        case searchButton:
+            print("searchButton")
+        case listButton:
+            print("listButton")
+        case menuButton:
+            let tableMenu = CustomMenu()
+            tableMenu.modalPresentationStyle = .popover
+            let popOverTableMenu = tableMenu.popoverPresentationController
+            popOverTableMenu?.delegate = self
+            popOverTableMenu?.sourceView = menuButton
+            popOverTableMenu?.sourceRect = menuButton.bounds
+            tableMenu.preferredContentSize = CGSize(width: 250, height: 250)
+            
+            let currentController = self.getCurrentViewController()
+            
+            currentController?.present(tableMenu, animated: true, completion: nil)
+//            self.presentationControllerDidAttemptToDismiss?(popOverTableMenu)
+            
+        default:
+            print("error button")
+        }
+    }
+    
+    func getCurrentViewController() -> UIViewController? {
+
+        if let rootController = UIApplication.shared.keyWindow?.rootViewController {
+            var currentController: UIViewController! = rootController
+            while( currentController.presentedViewController != nil ) {
+                currentController = currentController.presentedViewController
+            }
+            return currentController
+        }
+        return nil
+
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension ButtonToolBar:UIPopoverPresentationControllerDelegate{
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }
